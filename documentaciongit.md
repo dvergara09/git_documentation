@@ -9,7 +9,13 @@
 
 ### FLUJO DE TRABAJO EN GIT
 **Creando repositorio:** `git init`  
-**Borrar repositorio:** `rm -rf .git`   
+**Borrar repositorio:** `rm -rf .git`
+#### Definiciones:
+**Stagin:** Area temporal en memoria RAM, area completamente desconectada, y donde al principio se van agregando los cambios
+**Repositorio:** Carpeta .git es donde van a estar todos los cambios al final del proyecto, nombre por defecto *master*
+**Untracked:** Archivo modificado que no esta en staging
+**Traked:** Archivo modificado
+
 **Agregando archivos:**
 1. `git add archivo` (agrega un archivo) 
 2. `git add -A` (agrega todos los archivos) 
