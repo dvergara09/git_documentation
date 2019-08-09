@@ -25,7 +25,9 @@
 1. `git rm --cached archivo` (lo borra del staging) 
 2. `git rm -f archivo` (lo borra complemetamente)
 
-**Viendo estados:** `git status`  
+**Viendo estados:** 
+1. `git status` Estado del archivo
+2. `git show archivo` Cambios que ha sufrido el archivo, importante cuando tenemos un archivo que no funciona y no sabemos que le pasa  
 **Confirmando cambios:** `git commit -m 'mensaje'`  
 **Corrigiendo ultimo cambios:** `git -amend` (puede cambiar el ultimo commit que hiciste)  
 **Etiquetando:** cuando queremos colocarle etiquetas al proyecto como por ejemplo: version 1, version 2 y asi 
