@@ -19,7 +19,7 @@
 **Agregando archivos:**
 1. `git add archivo` (agrega un archivo) 
 2. `git add -A` (agrega todos los archivos) 
-3. `git add -n archivo` (no hace nada, sirve para ver los archivos que puedes agregar) 
+3. `git add -n archivo` (no hace nada, sirve para ver los archivos que puedes agregar)
 
 **Quitando archivos cambiados:** 
 1. `git rm --cached archivo` (lo borra del staging) 
@@ -28,21 +28,25 @@
 **Viendo estados:** 
 1. `git status` Estado del archivo
 2. `git show archivo` Cambios que ha sufrido el archivo, importante cuando tenemos un archivo que no funciona y no sabemos que le pasa  
-**Confirmando cambios:** `git commit -m 'mensaje'`  
+**Confirmando cambios:** 
+1. `git commit -m 'mensaje'` 
+2. `git commit -am 'mensaje'` hace git add y hace el commit enseguida, solo sirve para archivos que ya le hemos hecho git add anteriormente 
 **Corrigiendo ultimo cambios:** `git -amend` (puede cambiar el ultimo commit que hiciste)  
 **Etiquetando:** cuando queremos colocarle etiquetas al proyecto como por ejemplo: version 1, version 2 y asi 
 1. `git tag 0.5`(etiquetar solamente con un numero de version) 
 2. `git tag -a 0.5 -m 'version estable'` (etiquetar con un mensaje)
-3. `git tag 0.3 (sha1)` (etiquetar commit anterior) 
-4. `git tag -l` (lista de etiquetas) 
-5. `git tag -d 0.5` (elimina la etiqueta) 
-6. `git tag -f -a 0.1 -m 'mensaje' (sha1)` (renombrar etiqueta)   
+3. `git tag -a 0.5 -m 'version estable' sha1` (etiquetar con un mensaje en especifico)
+4. `git tag 0.3 (sha1)` (etiquetar commit anterior) 
+5. `git tag -l` (lista de etiquetas) 
+6. `git tag -d 0.5` (elimina la etiqueta) 
+7. `git tag -f -a 0.1 -m 'mensaje' (sha1)` (renombrar etiqueta)   
 _hay que tener en cuenta que despues de renombrar hay que eliminar la que tiene le nombre errado_
 
 **Revisando historia del proyecto:** 
 1. `git log` (toda la informacion del log)
 2. `git log --oneline` (log resumido)
 3. `git log --oneline --graph` (grafico de como van los commits en el proyecto) _importante para cuando se trabaje con ramas_
+4. `git log --stat` nos muestra el git log con los cambios que hemos hecho en cada commit
 
 **Revisando cambios entre commits:**
 1. `git diff sha1` (cambios entre estado actual y el commit del sha1)
@@ -85,6 +89,10 @@ _hay que tener en cuenta que despues de renombrar hay que eliminar la que tiene 
 1. `git cherry pick sha1` elige un commit en especifico de otra rama y lo agrega a la rama que estamos actualmente
 
 ### GITHUB
+**Iniciando**
+1. **README** archivo que se va a ver cuando la persona entre al repositorio en github
+2. **git ignore:**
+3. **Licencias:** Licencias que regiran nuestro codigo
 **Git clone/fork (clonando repositorios remotos):**
 1. `git clone https://repositorio` para descargar un repositorio remoto desde github para el computador (tambien podemos descargar el .zip)
 2. fork es para copiar un repositorio remoto de otro perfil de GitHub a nuestro propio perfil
