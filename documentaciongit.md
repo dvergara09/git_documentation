@@ -27,7 +27,8 @@
 
 **Viendo estados:** 
 1. `git status` Estado del archivo
-2. `git show archivo` Cambios que ha sufrido el archivo, importante cuando tenemos un archivo que no funciona y no sabemos que le pasa  
+2. `git show archivo` Cambios que ha sufrido el archivo, importante cuando tenemos un archivo que no funciona y no sabemos que le pasa 
+3. `git blame archivo`: ver quien hizo que cosa en cada linea del archivo
 **Confirmando cambios:** 
 1. `git commit -m 'mensaje'` 
 2. `git commit -am 'mensaje'` hace git add y hace el commit enseguida, solo sirve para archivos que ya le hemos hecho git add anteriormente 
@@ -48,6 +49,13 @@ _hay que tener en cuenta que despues de renombrar hay que eliminar la que tiene 
 3. `git log --oneline --graph` (grafico de como van los commits en el proyecto) _importante para cuando se trabaje con ramas_
 4. `git log --stat` nos muestra el git log con los cambios que hemos hecho en cada commit
 
+**Busqueda:**
+1. `git grep palabra`: veces en que hemos usado una palabra en nuestro codigo
+2. `git grep -n palabra`: linea en donde implementamos esa linea
+3. `git grep -c palabra`: cantidad de veces que uso una palabra
+4. `git grep -c "<p>"`: para etiquetas
+5. `git log -S "palabra"`: para buscar dentro del log
+
 **Revisando cambios entre commits:**
 1. `git diff sha1` (cambios entre estado actual y el commit del sha1)
 2. `git diff 0.3` (cambios entre una etiqueta y la otra etiqueta)
@@ -57,6 +65,7 @@ _hay que tener en cuenta que despues de renombrar hay que eliminar la que tiene 
 1. **--soft:** `git reset --soft sha1` borra el ultimo commit, pero no elimina los archivos modificados y los mantiene en staging
 2. **--mixed:** `git reset --mixed sha1` borra el ultimo commit, pero no elimina los archivos modificados y elimina del staging
 3. **--hard:** `git reset --hard sha1` elimina todo fisicamente si esta en el working directory, pero si no han sido agregados no los elimina. Si borramos gran parte del proyecto, podemos volver a recuperar si tenemos el log anterior con el ultimo commit y hacer `git reset --hard sha1` con el sha de este ultimo commit y podemos volver al estado actual.
+4. **git reflog:** es un git log pero con mas cosas para referenciar
 
 ### MULTIPLES ENTORNOS DE TRABAJO
 **Git branch (Multiples variantes del repositorio):**
