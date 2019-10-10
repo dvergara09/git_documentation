@@ -32,7 +32,7 @@
 **Confirmando cambios:** 
 1. `git commit -m 'mensaje'` 
 2. `git commit -am 'mensaje'` hace git add y hace el commit enseguida, solo sirve para archivos que ya le hemos hecho git add anteriormente 
-**Corrigiendo ultimo cambios:** `git -amend` (puede cambiar el ultimo commit que hiciste)  
+**Corrigiendo ultimo cambios:** `git commit --amend` (puede cambiar el ultimo commit que hiciste)  
 **Etiquetando:** cuando queremos colocarle etiquetas al proyecto como por ejemplo: version 1, version 2 y asi 
 1. `git tag 0.5`(etiquetar solamente con un numero de version) 
 2. `git tag -a 0.5 -m 'version estable'` (etiquetar con un mensaje)
