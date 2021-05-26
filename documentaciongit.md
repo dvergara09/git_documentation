@@ -5,7 +5,7 @@
 ### CONFIGURACIÓN INICIAL
 
 1. **Nombre:** `git config --global user.name 'Daniel Vergara'`
-2. **Email:** `git config --global user.email danielvsuarez01@gmail.com `
+2. **Email:** `git config --global user.email your email `
 3. **Color:** `git config --global color.ui true`
 4. **Listar cambios:** `git config --list`
 
